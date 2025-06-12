@@ -1,39 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Visualização do Arquivo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       text-align: center;
-      padding: 40px;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin-top: 50px;
     }
-    img {
-      width: 80%;
-      max-width: 600px;
-      margin-bottom: 20px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .botao-personalizado {
+      background-color: #00bfff;
+      color: #ff1493;
+      border: none;
       border-radius: 10px;
+      padding: 15px 30px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px #888888;
     }
-    .btn {
-      padding: 12px 24px;
-      font-size: 16px;
+
+    .botao-pdf {
+      margin-top: 30px;
       background-color: #007bff;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
       cursor: pointer;
-      text-decoration: none;
     }
-    .btn:hover {
+
+    .botao-pdf:hover {
       background-color: #0056b3;
     }
   </style>
 </head>
 <body>
   <h2>Visualize o Documento</h2>
-  <img src="Prancheta%201.jpg" alt="Capa do Documento">
-  <br>
-  <a href="Testeee1.pdf" target="_blank" class="btn">Abrir Arquivo</a>
+
+  <!-- Botão principal -->
+  <button class="botao-personalizado">
+    <span style="font-style: italic;">CLIQUE AQUI</span><br>❤️
+  </button>
+
+  <!-- Botão de abrir PDF posicionado logo abaixo -->
+  <div>
+    <a href="Testeee1.pdf" target="_blank">
+      <button class="botao-pdf">Abrir Arquivo</button>
+    </a>
+  </div>
 </body>
 </html>
