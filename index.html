@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Visualização do Arquivo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Documento</title>
   <style>
     body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e0f7ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      margin-top: 50px;
     }
 
-    h2 {
+    h1 {
+      color: #222;
       margin-bottom: 40px;
     }
 
-    .botao-personalizado {
-      background-color: #00bfff;
+    .btn-fancy {
+      background: #00bfff;
       color: #ff1493;
-      border: none;
-      border-radius: 10px;
-      padding: 15px 30px;
-      font-size: 24px;
       font-weight: bold;
+      padding: 15px 30px;
+      font-size: 22px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       cursor: pointer;
-      box-shadow: 2px 2px 5px #888888;
+      transition: transform 0.2s ease, background 0.3s ease;
     }
 
-    .botao-pdf {
-      margin-top: 30px;
-      background-color: #007bff;
+    .btn-fancy:hover {
+      background: #1e90ff;
+      transform: scale(1.05);
+    }
+
+    .heart {
+      display: inline-block;
+      margin-left: 8px;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    .btn-open {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007bff;
       color: white;
       border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      font-size: 16px;
+      border-radius: 8px;
       cursor: pointer;
+      font-size: 16px;
     }
 
-    .botao-pdf:hover {
-      background-color: #0056b3;
+    .btn-open:hover {
+      background: #0056b3;
     }
   </style>
 </head>
 <body>
-  <h2>Visualize o Documento</h2>
-
-  <!-- Botão principal -->
-  <button class="botao-personalizado">
-    <span style="font-style: italic;">CLIQUE AQUI</span><br>❤️
+  <h1>Visualize o Documento</h1>
+  
+  <button class="btn-fancy">
+    CLIQUE AQUI <span class="heart">❤️</span>
   </button>
 
-  <!-- Botão de abrir PDF posicionado logo abaixo -->
-  <div>
-    <a href="Testeee1.pdf" target="_blank">
-      <button class="botao-pdf">Abrir Arquivo</button>
-    </a>
-  </div>
+  <br>
+
+  <a href="SEU_ARQUIVO_AQUI.pdf" target="_blank">
+    <button class="btn-open">Abrir Arquivo</button>
+  </a>
 </body>
 </html>
